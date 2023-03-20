@@ -1,4 +1,18 @@
+:root {
+    --primary-color: #0A3E3F;
+    --secondary-color: #37C4B9;
+    --accent-color: #D4EDEC;
+}
+body{
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
 nav{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     min-height: 10vh;
@@ -9,7 +23,7 @@ nav{
     display: flex;
     align-items: center;
     height: 80px;
-  margin:15px 0;
+    margin:15px 0;
 }
 .navbar ul{
     display: flex;
@@ -28,15 +42,59 @@ nav{
 }
 .Main{
     background-color: #eee;
-    height: 80vh;
+    /* background-image: url(./images/react-logo.png);
+    background-repeat: no-repeat;
+    background-position: right 50%; */
+    height: 90vh;
     display: flex;
     align-items: center;
 }
-.Main .pre-title{
+.Main .main-pre-title{
     letter-spacing: 2px;
 }
-.Main .title{
+.Main .main-title{
     font-size: 40px;
     margin: 0;
     padding: 0;
+}
+.main-facts li{
+    line-height: 22px;
+}
+.main-facts li::marker{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+/* *********************************** INFO CARD **************************** */
+.Info-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Info-card .info{
+    width: 300px;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    padding: 20px 20px;
+}
+.Info-card .info img{
+    width: 100%;
+}
+.Info-card .info a{
+    color: #37C4B9;
+    text-decoration: none;
+
+}
+.info .about,.info .interests{
+    text-align: left; 
+}
+.info .footer ul{
+    display: flex;
+}
+.info .footer ul li{
+    list-style:  none;
+}
+.info .footer li a{
+    padding: 0px 5px;
 }
