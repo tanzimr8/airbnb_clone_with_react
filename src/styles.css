@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+    background-color: #222;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li,
+.navbar ul li a{
+    margin: 0px 10px;
+    color:#fff;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.Main{
+    background-color: #eee;
+    height: 80vh;
+}
