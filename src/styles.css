@@ -8,6 +8,8 @@ nav{
 .logo{
     display: flex;
     align-items: center;
+    height: 80px;
+  margin:15px 0;
 }
 .navbar ul{
     display: flex;
@@ -27,4 +29,14 @@ nav{
 .Main{
     background-color: #eee;
     height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.Main .pre-title{
+    letter-spacing: 2px;
+}
+.Main .title{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
 }
