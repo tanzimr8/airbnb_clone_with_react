@@ -98,3 +98,40 @@ nav{
 .info .footer li a{
     padding: 0px 5px;
 }
+/* *********************************** INFO CARD ENDS**************************** */
+
+
+/* ****************AIR BNB******************** */
+.airBnbLists{
+    display: flex;
+}
+.air-bnb{
+    display: flex;
+    flex-direction: column;
+}
+.air-bnb img{
+    width:30%;
+}
+.air-bnb .airbnb-rating{
+    text-align: center;
+}
+.airbnb-price span{
+    font-weight: 800;
+}
+/* ***********************
+ */
+ .movies_wrapper{
+    display: flex;
+    flex-direction: column;
+    
+ }
+.movies{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* column-gap:1.2em; */
+}
+ .movie_thumb{
+    width: 50%;
+ }
