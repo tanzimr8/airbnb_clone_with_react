@@ -1,13 +1,14 @@
-import Airbnb from './../../images/airbnb-image.webp';
-const AirbnbCard = ()=>{
+const AirbnbCard = ({rating,title,description,price,image,showing_now})=>{
+    const status = showing_now === 0 ? 'Sold Out' : 'Available';
     return(
             <div className='air-bnb'>
-                <img src="" className="img-aribnb-card"/>
                 <div className="airbnb-rating">
-                    <img src={Airbnb} className="img-star"/>
-                    <p className="airbnb-rate">5.0</p> 
-                    <h4 className="airbnb-title">AirBnb Delux</h4>   
-                    <p className="airbnb-price"><span>$120</span> per night</p>
+                    <img src={`./images/${image}`} alt="airbnb image" className="img-aribnb-card"/>
+                    <p className="airbnb-rate">{rating}</p> 
+                    <h4 className="airbnb-title">{title}</h4>   
+                    <p className="airbnb-description">{description}</p>
+                    <p className="airbnb-price"><span>{price}</span> per night</p>                    
+                    {status && <h5 className={status === 'Available' ? 'available' : 'sold'}>{status}</h5>}
                 </div>
             </div>
     );

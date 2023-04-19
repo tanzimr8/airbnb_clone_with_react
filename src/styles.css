@@ -135,3 +135,12 @@ nav{
  .movie_thumb{
     width: 50%;
  }
+ .airbnd_card{
+    display: flex;
+ }
+ .available{
+    color:green;
+ }
+ .sold{
+    color:red;
+ }
