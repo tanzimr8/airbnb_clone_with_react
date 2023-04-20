@@ -144,3 +144,38 @@ nav{
  .sold{
     color:red;
  }
+
+ .travel_container{
+    min-height: 100vh;
+    background-color: #222;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 10%;
+ }
+ .travel_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+ }
+.travel_card{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.travel_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.travel_image img{
+    width: 200px;    
+}
+.travel_info{
+    padding: 20px;
+}
+.travel_info .description{
+width: 70%;
+}
