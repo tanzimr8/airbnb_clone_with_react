@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Travel from './components/Travel';
 import Form from './components/Form';
+import Meme from './components/Meme';
 // import data from './data';
 // import AirBnb from './components/Air-Bnb/AirbnbCard';
 function App() {
@@ -21,7 +22,10 @@ function App() {
     <Navbar/>
     <Main/>
     {/* <Travel/> */}
+    <div className="from-wrapper">
     <Form/>
+    <Meme/>
+    </div>
     </>
   )
 }
