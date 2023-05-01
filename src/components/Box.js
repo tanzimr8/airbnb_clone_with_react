@@ -1,13 +1,9 @@
 import { useState } from "react";
 const Box = (props)=>{
-    const [on,setOn] = useState(props.on); //derived state 
-    const toggle = ()=>{
-        setOn(prevState => !prevState);
-    }
     const styles = {
-        backgroundColor: on ? 'red' : '#fff'
+        backgroundColor: props.on ? 'red' : '#fff'
     }
-    return <div onClick={toggle} style={styles} className='box'></div>
+    return <div onClick={()=>{props.toggle(props.id)}} style={styles} className='box'></div>
 }
 
 export default Box;
