@@ -1,8 +1,14 @@
-const Joke = ({setup,punchline})=>{
+import { useState } from "react";
+const Joke = (props)=>{
+    const [visible,setVisible] = useState(true);
+    const toggle  = ()=>{
+        setVisible(prevVisible => !prevVisible)
+    }
     return(
         <>
-        <h2>{setup}</h2>
-        <h3>{punchline}</h3>
+            <h3>Setup: {props.setup}</h3>
+            <p>Punchline: {visible && props.punchline}</p>
+            <button onClick={toggle}>Show/Hide Punchline</button>
         </>
     );   
 }
