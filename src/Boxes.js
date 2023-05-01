@@ -7,22 +7,9 @@ const Boxes = ()=>{
     const toggle = (id)=>{
         // console.log(id);
         setSquires(prevSquires => {
-            const newSquires = [];
-            for(let i=0;i<prevSquires.length;i++){
-                const currentSquire = prevSquires[i];
-                if(currentSquire.id===id){
-                    const updatedSquire = {
-                        ...currentSquire,
-                        on:!currentSquire.on
-                    }
-                    newSquires.push(updatedSquire);
-                }
-                else{
-                    newSquires.push(currentSquire);
-                }
-                
-            }
-            return newSquires;
+            return prevSquires.map((squire)=>{
+                return squire.id === id ? {...squire, on:!squire.on} : squire;
+            })
         });
     }
     const squireElement = squires.map((squire)=>{
