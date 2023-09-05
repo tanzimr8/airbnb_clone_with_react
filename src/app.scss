@@ -1,6 +1,7 @@
 .app{
     height: 100vh;
     .section{
+        scroll-behavior: smooth;
         width:100%;
         height: calc(100vh - 70px);
         background-color: lightcoral;
