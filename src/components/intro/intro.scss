@@ -2,4 +2,50 @@
 
 .intro{
     background-color: $accentColor;
+    display: flex;
+    .left{
+        overflow: hidden;
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .img-container{
+            width:500px;
+            height:500px;
+            overflow: hidden;
+            background-color: crimson;
+            border-radius: 50%;
+      
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .right{
+        width:100%;
+        height:100%;
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .wrapper{
+         
+            h1{
+                font-size: 60px;
+            }
+            h2{
+                font-size: 30px;
+            }
+            h3{
+                font-size: 25px;
+            }
+            p{
+                width: 50%;
+                font-size: 17px;
+                line-height: 22px;
+                margin: 10px 0;
+            }
+        }
+    }
 }

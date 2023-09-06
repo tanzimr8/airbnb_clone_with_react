@@ -12,7 +12,7 @@
     transition: all .5s ease;
     .wrapper{
         height: 100%;
-        // overflow-y: hidden;
+        overflow-y: hidden;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -41,6 +41,7 @@
         }
         .right{
             .hamburger{
+                margin-right: 30px;
                 width: 32px;
                 height: 25px;
                 display: flex;
