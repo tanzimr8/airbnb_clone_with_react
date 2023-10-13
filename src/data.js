@@ -1,13 +1,13 @@
 export default [
     {
-        isFetured: true,
+        isFetured: false,
         category: 'web app',
         title: "Quiz Game to generate free Laptop Fair Ticket",
         techs: "PHP, MySQL, JavaScript, Bootstrap, HTML, CSS",
         link: "https://tmwebmedia.com/project/landing-page-for-asus/"
      },
      {
-        isFetured: true,
+        isFetured: false,
          category: 'web app',
          title: "Laptop Review Event Landing Page",
          techs: "Laravel, JavaScript, Bootstrap",

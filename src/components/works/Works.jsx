@@ -1,27 +1,31 @@
 import './works.scss';
-
+import workData from './workData'; 
+import Work from './Work';
+import { useState } from 'react';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 function Works() {
+  let[currentSlide, setCurrentSlide] = useState(0);
+  const handleClick = (pos)=>{
+    pos === 'left' ? setCurrentSlide(currentSlide > 0 ? currentSlide -1 : 2) : setCurrentSlide(currentSlide < workData.length-1 ? currentSlide +1 : 0);
+  }
   return (
     <div className='works' id='works'>
-      <div className="slider">
-        <div className="container">
-          <div className="item">
-            <div className="left">
-              <div className="leftContainer">
-                <div className="imgContainer">
-                  <img src="https://picsum.photos/200" alt="" />
-                </div>
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quaerat quia architecto assumenda? Molestiae, minima quis, natus aspernatur magnam laboriosam quasi, ipsam debitis recusandae totam sint mollitia nemo reprehenderit voluptate!</p><span>Projects</span>
-              </div>
-            </div>
-            <div className="right">
-              <img src="https://picsum.photos/300" alt="" />
-            </div>
-          </div>
-        </div>
+      <div className="slider" style={{transform:`translateX(${currentSlide * 100})`}}>
+      {workData.map((data)=>{
+        return <Work
+          id={data.id}
+          title = {data.title}
+          role = {data.role}
+          desc = {data.desc}
+          location = {data.location}
+          duration = {data.duration}
+        />
+      })}
       </div>
-    </div>
+      <img onClick={()=>{handleClick('left')}} src="/images/right.png" alt="left arrorw" className='arrow left' />
+      <img onClick={()=>{handleClick()}} src="/images/right.png" alt="right arrow" className='arrow right' />
+  </div> 
   )
 }
 
